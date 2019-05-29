@@ -1,0 +1,17 @@
+
+{% extends 'base.html'%}
+
+{% block content %}
+<div class=" col-md-9 col-sm-9">
+ <legend>Fill The Form To Add Student</legend>
+    <form class="site-form-create" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{from.media}}
+      {{form.as_p}}
+      <input type="submit" name="create" value="create">
+    </form>
+   
+</div>
+
+
+{% endblock %}

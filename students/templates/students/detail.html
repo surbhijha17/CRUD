@@ -1,0 +1,76 @@
+
+{% extends 'base.html'%}
+
+{% block content %}
+<div class=" col-md-12 col-sm-12">
+  <br><br>
+  
+    <legend>Student Details </legend>
+    
+    <table class="table table-striped" >
+
+
+ 
+<tbody>
+
+
+
+ 
+
+    <tr>
+    <td colspan="2"><center><img src="{{ s.pic.url }}" style="height:20%;width:20%;"></center></td>
+    <tr>
+    <tr>
+      <u><th colspan="2"><h4><u>Basic Informations</u></h4></th>
+    <tr>
+    <tr>
+      <td> Name </td>
+      <td> {{s.name}}</td>
+    </tr>
+    <tr>
+      <td> Class </td>
+      <td> {{s.classinfo}}</td>
+    </tr>
+    <tr>
+      <td> Roll No. </td>
+      <td> {{s.rollno}}</td>
+    </tr>
+     <tr>
+      <th colspan="2"><h4><u>Other Informations</u></h4></th>
+    <tr>
+    <tr>
+      <td> Mother's Name </td>
+      <td> {{s.mothername}}</td>
+    </tr>
+     <tr>
+      <td> Father's Name</td>
+      <td> {{s.fathername}}</td>
+    </tr>
+     <tr>
+      <td> DOB </td>
+      <td> {{s.dob}}</td>
+    </tr>
+     <tr>
+      <td> Nationality </td>
+      <td> {{s.nationality}}</td>
+    </tr>
+     <tr>
+      <td> Address </td>
+      <td> {{s.address}}</td>
+    </tr>
+     <tr>
+      <td> Mobile No. </td>
+      <td> {{s.mobileno}}</td>
+    </tr>
+     <tr>
+      <td> EmailId </td>
+      <td> {{s.email}}</td>
+    </tr>
+ 
+ 
+
+   </tbody>
+</table>
+</div>
+</div>  
+{% endblock %}

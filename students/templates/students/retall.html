@@ -1,0 +1,34 @@
+
+{% extends 'base.html'%}
+
+
+{% block content %}
+<div class=" col-md-12 col-sm-12">
+  <center><h3>List of Students</h3></center>
+<table class="table table-striped" >
+
+
+  <tr >
+    <th>Name</th>
+    <th>Class</th>
+    <th>Roll No</th>
+    <th colspan="3" style="text-align: center;"> Actions</th>
+    
+  </tr>
+<tbody>
+
+{% for p in s %}
+<tr>
+<td>{{p.name}}</td>
+<td>{{p.classinfo}}</td>
+<td>{{p.rollno}}</td>
+<td><a href="{% url 'students:detail' p.pk %}">View Details</a></td>
+<td><a href="{% url 'students:update' p.pk %}">Update </a> </td>
+<td><a href="{% url 'students:delete' p.pk %}">Delete </a> </td>
+</tr>
+{% endfor %}
+    </tbody>
+</table>
+</div>
+
+{% endblock %}
